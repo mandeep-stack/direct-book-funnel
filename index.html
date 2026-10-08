@@ -54,14 +54,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
 <style>
 *,*::before,*::after{box-sizing:border-box}
 html,body{margin:0;padding:0;background:#F7F6F3}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{text-rendering:optimizeLegibility;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none}
 .cta:hover{opacity:.88}
+@media (max-width:640px){.bk-stk-txt{display:none}}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #111110;outline-offset:2px}
 
 /* Booking form popup */
@@ -70,14 +73,14 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #1111
 .bk-modal{position:relative;width:100%;max-width:480px;background:#FFFFFF;border-radius:20px;padding:36px 32px 28px;box-shadow:0 24px 60px rgba(0,0,0,0.25);max-height:100%;overflow-y:auto;color:#111110}
 .bk-close{position:absolute;top:12px;right:12px;width:44px;height:44px;border-radius:50%;border:none;background:#F7F6F3;color:#4A4A48;font-size:18px;cursor:pointer;font-family:inherit}
 .bk-modal h2{margin:0 0 6px;font-size:26px;font-weight:900;letter-spacing:-0.03em}
-.bk-modal .bk-sub{margin:0 0 20px;font-size:14px;color:#4A4A48;line-height:1.5}
+.bk-modal .bk-sub{margin:0 0 20px;font-size:15px;color:#4A4A48;line-height:1.5}
 .bk-field{margin-bottom:14px}
-.bk-field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.bk-field label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
 .bk-field input{width:100%;border:1.5px solid #E5E4E0;border-radius:10px;padding:14px;font-size:16px;background:#F7F6F3;font-family:inherit;min-height:48px;color:#111110}
 .bk-pay{margin-top:6px;width:100%;background:#111110;color:#FFFFFF;border:none;font-size:16px;font-weight:700;border-radius:10px;min-height:52px;cursor:pointer;font-family:inherit}
 .bk-pay:disabled{opacity:.55;cursor:not-allowed}
-.bk-error{display:none;margin-top:12px;font-size:13px;color:#B82F2F;line-height:1.4}
-.bk-trust{margin-top:14px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:#4A4A48;text-align:center}
+.bk-error{display:none;margin-top:12px;font-size:14px;color:#B82F2F;line-height:1.4}
+.bk-trust{margin-top:14px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;color:#4A4A48;text-align:center}
 </style>
 </head>
 <body>
@@ -85,21 +88,21 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #1111
 
 <!-- NAV -->
 <div style="display:flex;align-items:center;justify-content:space-between;max-width:1120px;margin:0 auto;padding:20px 24px;box-sizing:border-box">
-<span style="font-size:20px;font-weight:900;letter-spacing:-0.03em">AdComp</span>
-<a class="cta" data-cta="nav" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:14px;font-weight:700;padding:11px 20px;border-radius:8px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center">Book Audit — ₹199</a>
+<a href="https://adcomp.xyz" aria-label="AdComp Digital Studio" style="display:inline-flex"><img src="logo.png" alt="AdComp Digital Studio" width="143" height="49" style="display:block;height:49px;width:auto"></a>
+<a class="cta" data-cta="nav" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:15px;font-weight:700;padding:11px 20px;border-radius:8px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center">Book Audit — ₹199</a>
 </div>
 
 <!-- HERO -->
 <section style="max-width:1120px;margin:0 auto;padding:40px 24px 64px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
 <div style="flex:1 1 520px;min-width:0">
-<div style="display:inline-flex;align-items:center;gap:8px;background:#FDF0F0;color:#B82F2F;border:1px solid #F5CCCC;border-radius:100px;padding:5px 13px;font-size:12px;font-weight:600;letter-spacing:0.03em;margin-bottom:24px"><span style="width:6px;height:6px;border-radius:50%;background:#D63B3B;display:inline-block"></span>For businesses running ads to a WordPress website</div>
-<h1 style="margin:0 0 20px;font-size:clamp(34px,5.4vw,60px);font-weight:900;line-height:1.06;letter-spacing:-0.035em">Your traffic is fine.<br><span style="color:#D63B3B">Your infrastructure</span><br>is not.</h1>
+<div style="display:inline-flex;align-items:center;gap:8px;background:#FDF0F0;color:#B82F2F;border:1px solid #F5CCCC;border-radius:100px;padding:5px 13px;font-size:13px;font-weight:600;letter-spacing:0.03em;margin-bottom:24px"><span style="width:6px;height:6px;border-radius:50%;background:#D63B3B;display:inline-block"></span>For businesses running ads to a WordPress website</div>
+<h1 style="margin:0 0 20px;font-size:clamp(34px,5.4vw,60px);font-weight:800;line-height:1.1;letter-spacing:-0.03em">Your traffic is fine.<br><span style="color:#D63B3B">Your infrastructure</span><br>is not.</h1>
 <p style="margin:0 0 32px;font-size:18px;line-height:1.65;color:#4A4A48;max-width:540px">Book a 30-minute audit call. We pre-audit your site, show you your live PageSpeed score, and tell you exactly what's slowing it down and what it costs to fix. Your ₹199 is adjusted toward the fix.</p>
 <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 20px">
-<a class="cta" data-cta="hero" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:16px;font-weight:700;padding:16px 30px;border-radius:10px;min-height:52px;box-sizing:border-box;display:inline-flex;align-items:center">Book Your Audit Call — ₹199 →</a>
-<span style="font-size:13px;color:#4A4A48;max-width:220px;line-height:1.4">Only 10 spots this month</span>
+<a class="cta" data-cta="hero" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:18px;font-weight:700;padding:16px 30px;border-radius:10px;min-height:52px;box-sizing:border-box;display:inline-flex;align-items:center">Book Your Audit Call — ₹199 →</a>
+<span style="font-size:14px;color:#4A4A48;max-width:220px;line-height:1.4">Only 10 spots this month</span>
 </div>
-<div style="display:flex;align-items:center;gap:8px;margin-top:18px;font-size:13px;color:#4A4A48">
+<div style="display:flex;align-items:center;gap:8px;margin-top:18px;font-size:14px;color:#4A4A48">
 <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="3.5" y="7" width="9" height="6.5" rx="1.5" stroke="#4A4A48" stroke-width="1.3"/><path d="M5.5 7V4.8A2.5 2.5 0 0 1 8 2.3v0a2.5 2.5 0 0 1 2.5 2.5V7" stroke="#4A4A48" stroke-width="1.3" stroke-linecap="round"/></svg>
 Payments secured by Razorpay · UPI, Cards &amp; Netbanking
 </div>
@@ -107,22 +110,22 @@ Payments secured by Razorpay · UPI, Cards &amp; Netbanking
 
 <!-- What you get on the call -->
 <div style="flex:1 1 340px;max-width:440px;min-width:0;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px;box-sizing:border-box">
-<div style="font-size:12px;font-weight:700;color:#4A4A48;letter-spacing:0.06em">ON THE 30-MINUTE CALL</div>
-<div style="display:flex;flex-direction:column;gap:14px;font-size:15px">
-<div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#EBF8F3;color:#0E7A5A;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">1</span><span><b>Your live PageSpeed score</b>, shown on screen, mobile and desktop</span></div>
-<div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#EBF8F3;color:#0E7A5A;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">2</span><span><b>What's slowing you down</b>, in plain language, plus any security gaps</span></div>
-<div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#EBF8F3;color:#0E7A5A;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">3</span><span><b>What it costs to fix</b>, with a 90+ guarantee. You decide on the call</span></div>
+<div style="font-size:13px;font-weight:700;color:#4A4A48;letter-spacing:0.06em">ON THE 30-MINUTE CALL</div>
+<div style="display:flex;flex-direction:column;gap:14px;font-size:16px">
+<div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#EBF8F3;color:#0E7A5A;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center">1</span><span><b>Your live PageSpeed score</b>, shown on screen, mobile and desktop</span></div>
+<div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#EBF8F3;color:#0E7A5A;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center">2</span><span><b>What's slowing you down</b>, in plain language, plus any security gaps</span></div>
+<div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;width:28px;height:28px;border-radius:50%;background:#EBF8F3;color:#0E7A5A;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center">3</span><span><b>What it costs to fix</b>, with a 90+ guarantee. You decide on the call</span></div>
 </div>
-<div style="font-size:13px;color:#4A4A48;border-top:1px solid #E5E4E0;padding-top:14px">₹199 is adjusted toward the fix if you go ahead.</div>
+<div style="font-size:14px;color:#4A4A48;border-top:1px solid #E5E4E0;padding-top:14px">₹199 is adjusted toward the fix if you go ahead.</div>
 </div>
 </section>
 
 <!-- PROOF BAR -->
 <section style="max-width:1120px;margin:0 auto;padding:0 24px 64px;box-sizing:border-box">
 <div style="display:flex;flex-wrap:wrap;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;overflow:hidden">
-<div style="flex:1 1 220px;padding:26px;text-align:center;border-right:1px solid #E5E4E0"><div style="font-size:36px;font-weight:900;letter-spacing:-0.03em">90+</div><div style="font-size:13px;color:#4A4A48">PageSpeed score guaranteed on the fix</div></div>
-<div style="flex:1 1 220px;padding:26px;text-align:center;border-right:1px solid #E5E4E0"><div style="font-size:36px;font-weight:900;letter-spacing:-0.03em">5</div><div style="font-size:13px;color:#4A4A48">Business days to deliver</div></div>
-<div style="flex:1 1 220px;padding:26px;text-align:center"><div style="font-size:36px;font-weight:900;letter-spacing:-0.03em">₹0</div><div style="font-size:13px;color:#4A4A48">If we miss the target</div></div>
+<div style="flex:1 1 220px;padding:26px;text-align:center;border-right:1px solid #E5E4E0"><div style="font-size:36px;font-weight:900;letter-spacing:-0.03em">90+</div><div style="font-size:14px;color:#4A4A48">PageSpeed score guaranteed on the fix</div></div>
+<div style="flex:1 1 220px;padding:26px;text-align:center;border-right:1px solid #E5E4E0"><div style="font-size:36px;font-weight:900;letter-spacing:-0.03em">5</div><div style="font-size:14px;color:#4A4A48">Business days to deliver</div></div>
+<div style="flex:1 1 220px;padding:26px;text-align:center"><div style="font-size:36px;font-weight:900;letter-spacing:-0.03em">₹0</div><div style="font-size:14px;color:#4A4A48">If we miss the target</div></div>
 </div>
 </section>
 
@@ -130,60 +133,60 @@ Payments secured by Razorpay · UPI, Cards &amp; Netbanking
 
 <!-- PROBLEM -->
 <section style="max-width:1120px;margin:0 auto;padding:72px 24px;box-sizing:border-box">
-<div style="font-size:12px;font-weight:700;letter-spacing:0.08em;color:#B82F2F;text-transform:uppercase;margin-bottom:12px">Why your ads are underperforming</div>
-<h2 style="margin:0 0 16px;font-size:clamp(28px,4vw,42px);font-weight:900;letter-spacing:-0.03em;line-height:1.1">Marketing gets blamed.<br>Infrastructure is the culprit.</h2>
-<p style="margin:0 0 36px;font-size:17px;color:#4A4A48;max-width:640px;line-height:1.65">When conversions drop, the instinct is to fix the ads. But a slow, unsecured site is a leak underneath them, and you pay for every click that falls through it.</p>
+<div style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#B82F2F;text-transform:uppercase;margin-bottom:12px">Why your ads are underperforming</div>
+<h2 style="margin:0 0 16px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-0.025em;line-height:1.15">Marketing gets blamed.<br>Infrastructure is the culprit.</h2>
+<p style="margin:0 0 36px;font-size:18px;color:#4A4A48;max-width:640px;line-height:1.65">When conversions drop, the instinct is to fix the ads. But a slow, unsecured site is a leak underneath them, and you pay for every click that falls through it.</p>
 <div style="display:flex;flex-wrap:wrap;gap:16px">
-<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="font-size:40px;font-weight:900;letter-spacing:-0.03em;color:#B82F2F;line-height:1">15–30%</div><h4 style="margin:12px 0 6px;font-size:16px">Paid traffic lost</h4><p style="margin:0;font-size:14px;color:#4A4A48">Most businesses lose this much to slow load times, security gaps and weak mobile experience.</p></div>
-<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="font-size:40px;font-weight:900;letter-spacing:-0.03em;color:#B82F2F;line-height:1">53%</div><h4 style="margin:12px 0 6px;font-size:16px">Leave in 3 seconds</h4><p style="margin:0;font-size:14px;color:#4A4A48">More than half your paid visitors are gone before they see your offer. You still pay for the click.</p></div>
-<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="font-size:40px;font-weight:900;letter-spacing:-0.03em;color:#B82F2F;line-height:1">70%</div><h4 style="margin:12px 0 6px;font-size:16px">Of traffic is mobile</h4><p style="margin:0;font-size:14px;color:#4A4A48">Most sites are tuned for desktop. The majority of your visitors get the slow, broken version.</p></div>
-<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="font-size:40px;font-weight:900;letter-spacing:-0.03em;color:#B82F2F;line-height:1">1 hack</div><h4 style="margin:12px 0 6px;font-size:16px">Wipes every lead form</h4><p style="margin:0;font-size:14px;color:#4A4A48">An unsecured WordPress site is one malware injection from losing every enquiry and booking.</p></div>
+<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="font-size:40px;font-weight:900;letter-spacing:-0.03em;color:#B82F2F;line-height:1">15–30%</div><h4 style="margin:12px 0 6px;font-size:16px">Paid traffic lost</h4><p style="margin:0;font-size:15px;color:#4A4A48">Most businesses lose this much to slow load times, security gaps and weak mobile experience.</p></div>
+<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="font-size:40px;font-weight:900;letter-spacing:-0.03em;color:#B82F2F;line-height:1">53%</div><h4 style="margin:12px 0 6px;font-size:16px">Leave in 3 seconds</h4><p style="margin:0;font-size:15px;color:#4A4A48">More than half your paid visitors are gone before they see your offer. You still pay for the click.</p></div>
+<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="font-size:40px;font-weight:900;letter-spacing:-0.03em;color:#B82F2F;line-height:1">70%</div><h4 style="margin:12px 0 6px;font-size:16px">Of traffic is mobile</h4><p style="margin:0;font-size:15px;color:#4A4A48">Most sites are tuned for desktop. The majority of your visitors get the slow, broken version.</p></div>
+<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="font-size:40px;font-weight:900;letter-spacing:-0.03em;color:#B82F2F;line-height:1">1 hack</div><h4 style="margin:12px 0 6px;font-size:16px">Wipes every lead form</h4><p style="margin:0;font-size:15px;color:#4A4A48">An unsecured WordPress site is one malware injection from losing every enquiry and booking.</p></div>
 </div>
 </section>
 
 <hr style="border:none;border-top:1px solid #E5E4E0;margin:0">
 
-<div style="max-width:1120px;margin:0 auto;padding:56px 24px 0;box-sizing:border-box"><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:14px;padding:20px 24px"><div style="font-size:17px;font-weight:700;letter-spacing:-0.01em;flex:1 1 300px">Not sure which of these is hurting you? We'll tell you on the call.</div><a class="cta" data-cta="after_problem" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:15px;font-weight:700;padding:14px 24px;border-radius:10px;min-height:48px;box-sizing:border-box;display:inline-flex;align-items:center">Book Audit Call — ₹199 →</a></div></div>
+<div style="max-width:1120px;margin:0 auto;padding:56px 24px 0;box-sizing:border-box"><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:14px;padding:20px 24px"><div style="font-size:18px;font-weight:700;letter-spacing:-0.01em;flex:1 1 300px">Not sure which of these is hurting you? We'll tell you on the call.</div><a class="cta" data-cta="after_problem" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:16px;font-weight:700;padding:14px 24px;border-radius:10px;min-height:48px;box-sizing:border-box;display:inline-flex;align-items:center">Book Audit Call — ₹199 →</a></div></div>
 
 <!-- WHAT HAPPENS -->
 <section style="max-width:1120px;margin:0 auto;padding:72px 24px;box-sizing:border-box">
-<div style="font-size:12px;font-weight:700;letter-spacing:0.08em;color:#4A4A48;text-transform:uppercase;margin-bottom:12px">The process</div>
-<h2 style="margin:0 0 36px;font-size:clamp(28px,4vw,42px);font-weight:900;letter-spacing:-0.03em;line-height:1.1">Pay ₹199. Get your answer in one call.</h2>
+<div style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#4A4A48;text-transform:uppercase;margin-bottom:12px">The process</div>
+<h2 style="margin:0 0 36px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-0.025em;line-height:1.15">Pay ₹199. Get your answer in one call.</h2>
 <div style="display:flex;flex-wrap:wrap;gap:16px">
-<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="width:36px;height:36px;border-radius:50%;background:#111110;color:#FFFFFF;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px">1</div><h4 style="margin:0 0 6px;font-size:17px">Book your slot</h4><p style="margin:0;font-size:14px;color:#4A4A48">Share your details and pay ₹199 to secure the call. Takes 20 seconds.</p></div>
-<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="width:36px;height:36px;border-radius:50%;background:#111110;color:#FFFFFF;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px">2</div><h4 style="margin:0 0 6px;font-size:17px">We pre-audit your site</h4><p style="margin:0;font-size:14px;color:#4A4A48">Before the call, we check your speed and security, so every minute counts.</p></div>
-<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="width:36px;height:36px;border-radius:50%;background:#111110;color:#FFFFFF;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px">3</div><h4 style="margin:0 0 6px;font-size:17px">30-minute audit call</h4><p style="margin:0;font-size:14px;color:#4A4A48">We show your live score, explain what's slowing you down, and price the fix. You decide on the call.</p></div>
-<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="width:36px;height:36px;border-radius:50%;background:#111110;color:#FFFFFF;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px">4</div><h4 style="margin:0 0 6px;font-size:17px">Fix in 5 days, with proof</h4><p style="margin:0;font-size:14px;color:#4A4A48">If you go ahead: 90+ score guaranteed, with a before and after report. ₹199 is adjusted.</p></div>
+<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="width:36px;height:36px;border-radius:50%;background:#111110;color:#FFFFFF;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px">1</div><h4 style="margin:0 0 6px;font-size:18px">Book your slot</h4><p style="margin:0;font-size:15px;color:#4A4A48">Share your details and pay ₹199 to secure the call. Takes 20 seconds.</p></div>
+<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="width:36px;height:36px;border-radius:50%;background:#111110;color:#FFFFFF;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px">2</div><h4 style="margin:0 0 6px;font-size:18px">We pre-audit your site</h4><p style="margin:0;font-size:15px;color:#4A4A48">Before the call, we check your speed and security, so every minute counts.</p></div>
+<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="width:36px;height:36px;border-radius:50%;background:#111110;color:#FFFFFF;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px">3</div><h4 style="margin:0 0 6px;font-size:18px">30-minute audit call</h4><p style="margin:0;font-size:15px;color:#4A4A48">We show your live score, explain what's slowing you down, and price the fix. You decide on the call.</p></div>
+<div style="flex:1 1 240px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:12px;padding:24px"><div style="width:36px;height:36px;border-radius:50%;background:#111110;color:#FFFFFF;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px">4</div><h4 style="margin:0 0 6px;font-size:18px">Fix in 5 days, with proof</h4><p style="margin:0;font-size:15px;color:#4A4A48">If you go ahead: 90+ score guaranteed, with a before and after report. ₹199 is adjusted.</p></div>
 </div>
 </section>
 
-<div style="max-width:1120px;margin:0 auto;padding:0 24px 56px;box-sizing:border-box"><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:14px;padding:20px 24px"><div style="font-size:17px;font-weight:700;letter-spacing:-0.01em;flex:1 1 300px">Booking takes 20 seconds. Your slot is confirmed after payment.</div><a class="cta" data-cta="after_process" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:15px;font-weight:700;padding:14px 24px;border-radius:10px;min-height:48px;box-sizing:border-box;display:inline-flex;align-items:center">Book Audit Call — ₹199 →</a></div></div>
+<div style="max-width:1120px;margin:0 auto;padding:0 24px 56px;box-sizing:border-box"><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:14px;padding:20px 24px"><div style="font-size:18px;font-weight:700;letter-spacing:-0.01em;flex:1 1 300px">Booking takes 20 seconds. Your slot is confirmed after payment.</div><a class="cta" data-cta="after_process" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:16px;font-weight:700;padding:14px 24px;border-radius:10px;min-height:48px;box-sizing:border-box;display:inline-flex;align-items:center">Book Audit Call — ₹199 →</a></div></div>
 
 <!-- GUARANTEE -->
 <section style="max-width:1120px;margin:0 auto;padding:0 24px 72px;box-sizing:border-box">
 <div style="background:#EBF8F3;border:1px solid #A8E6D0;border-radius:16px;padding:48px 32px;text-align:center">
 <div style="font-size:64px;font-weight:900;letter-spacing:-0.04em;color:#0E7A5A;line-height:1">90+</div>
-<div style="font-size:14px;font-weight:600;color:#0E7A5A;margin:6px 0 20px">Google PageSpeed score, guaranteed</div>
-<h2 style="margin:0 0 14px;font-size:clamp(26px,3.6vw,38px);font-weight:900;letter-spacing:-0.03em;line-height:1.1">Miss the target? You pay nothing.</h2>
+<div style="font-size:15px;font-weight:600;color:#0E7A5A;margin:6px 0 20px">Google PageSpeed score, guaranteed</div>
+<h2 style="margin:0 0 14px;font-size:clamp(26px,3.6vw,38px);font-weight:800;letter-spacing:-0.025em;line-height:1.15">Miss the target? You pay nothing.</h2>
 <p style="margin:0 auto;max-width:560px;font-size:16px;color:#4A4A48;line-height:1.65">We guarantee 90+ on desktop within 5 business days, or we refund every rupee. No questions. No drama.</p>
 </div>
 </section>
 
 <hr style="border:none;border-top:1px solid #E5E4E0;margin:0">
 
-<div style="max-width:1120px;margin:0 auto;padding:56px 24px 0;box-sizing:border-box"><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:14px;padding:20px 24px"><div style="font-size:17px;font-weight:700;letter-spacing:-0.01em;flex:1 1 300px">Start with the ₹199 audit. The fix comes with a 90+ guarantee.</div><a class="cta" data-cta="after_guarantee" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:15px;font-weight:700;padding:14px 24px;border-radius:10px;min-height:48px;box-sizing:border-box;display:inline-flex;align-items:center">Book Audit Call — ₹199 →</a></div></div>
+<div style="max-width:1120px;margin:0 auto;padding:56px 24px 0;box-sizing:border-box"><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:14px;padding:20px 24px"><div style="font-size:18px;font-weight:700;letter-spacing:-0.01em;flex:1 1 300px">Start with the ₹199 audit. The fix comes with a 90+ guarantee.</div><a class="cta" data-cta="after_guarantee" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:16px;font-weight:700;padding:14px 24px;border-radius:10px;min-height:48px;box-sizing:border-box;display:inline-flex;align-items:center">Book Audit Call — ₹199 →</a></div></div>
 
 <!-- OFFER -->
 <section style="max-width:1120px;margin:0 auto;padding:72px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:40px;align-items:center">
 <div style="flex:1 1 400px;min-width:0">
-<div style="font-size:12px;font-weight:700;letter-spacing:0.08em;color:#4A4A48;text-transform:uppercase;margin-bottom:12px">Straightforward pricing</div>
-<h2 style="margin:0 0 16px;font-size:clamp(28px,4vw,42px);font-weight:900;letter-spacing:-0.03em;line-height:1.1">No surprise invoice.</h2>
-<p style="margin:0;font-size:17px;color:#4A4A48;line-height:1.65;max-width:480px">Start with the audit. If you want the fix, the ₹199 comes off the total. If you don't, you still walk away knowing exactly what's wrong.</p>
+<div style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#4A4A48;text-transform:uppercase;margin-bottom:12px">Straightforward pricing</div>
+<h2 style="margin:0 0 16px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-0.025em;line-height:1.15">No surprise invoice.</h2>
+<p style="margin:0;font-size:18px;color:#4A4A48;line-height:1.65;max-width:480px">Start with the audit. If you want the fix, the ₹199 comes off the total. If you don't, you still walk away knowing exactly what's wrong.</p>
 </div>
 <div style="flex:1 1 360px;max-width:460px;background:#FFFFFF;border:2px solid #111110;border-radius:16px;padding:32px;box-sizing:border-box">
-<div style="font-size:13px;font-weight:700;color:#4A4A48;letter-spacing:0.04em">AUDIT CALL</div>
-<div style="display:flex;align-items:baseline;gap:8px;margin:6px 0 16px"><span style="font-size:52px;font-weight:900;letter-spacing:-0.04em">₹199</span><span style="font-size:14px;color:#4A4A48">adjusted toward the fix</span></div>
-<div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;font-size:15px">
+<div style="font-size:14px;font-weight:700;color:#4A4A48;letter-spacing:0.04em">AUDIT CALL</div>
+<div style="display:flex;align-items:baseline;gap:8px;margin:6px 0 16px"><span style="font-size:52px;font-weight:900;letter-spacing:-0.04em">₹199</span><span style="font-size:15px;color:#4A4A48">adjusted toward the fix</span></div>
+<div style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px;font-size:16px">
 <div>✓&nbsp; 30-minute live call with your PageSpeed score</div>
 <div>✓&nbsp; Pre-audit of your site before the call</div>
 <div>✓&nbsp; What's broken, and exactly what it costs to fix</div>
@@ -197,19 +200,19 @@ Payments secured by Razorpay · UPI, Cards &amp; Netbanking
 
 <!-- WHO FOR -->
 <section style="max-width:1120px;margin:0 auto;padding:72px 24px;box-sizing:border-box">
-<div style="font-size:12px;font-weight:700;letter-spacing:0.08em;color:#4A4A48;text-transform:uppercase;margin-bottom:12px">Who this is for</div>
-<h2 style="margin:0 0 28px;font-size:clamp(28px,4vw,42px);font-weight:900;letter-spacing:-0.03em;line-height:1.1">Built for businesses running ads to a WordPress site.</h2>
+<div style="font-size:13px;font-weight:700;letter-spacing:0.08em;color:#4A4A48;text-transform:uppercase;margin-bottom:12px">Who this is for</div>
+<h2 style="margin:0 0 28px;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-0.025em;line-height:1.15">Built for businesses running ads to a WordPress site.</h2>
 <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px">
-<span style="background:#FFFFFF;border:1px solid #E5E4E0;border-radius:100px;padding:10px 18px;font-size:14px;font-weight:600">Doctors &amp; clinics</span>
-<span style="background:#FFFFFF;border:1px solid #E5E4E0;border-radius:100px;padding:10px 18px;font-size:14px;font-weight:600">Lawyers &amp; CA firms</span>
-<span style="background:#FFFFFF;border:1px solid #E5E4E0;border-radius:100px;padding:10px 18px;font-size:14px;font-weight:600">Coaches &amp; trainers</span>
-<span style="background:#FFFFFF;border:1px solid #E5E4E0;border-radius:100px;padding:10px 18px;font-size:14px;font-weight:600">Consultants</span>
-<span style="background:#FFFFFF;border:1px solid #E5E4E0;border-radius:100px;padding:10px 18px;font-size:14px;font-weight:600">E-commerce brands</span>
-<span style="background:#FFFFFF;border:1px solid #E5E4E0;border-radius:100px;padding:10px 18px;font-size:14px;font-weight:600">Real estate developers</span>
+<span style="background:#FFFFFF;border:1px solid #E5E4E0;border-radius:100px;padding:10px 18px;font-size:15px;font-weight:600">Doctors &amp; clinics</span>
+<span style="background:#FFFFFF;border:1px solid #E5E4E0;border-radius:100px;padding:10px 18px;font-size:15px;font-weight:600">Lawyers &amp; CA firms</span>
+<span style="background:#FFFFFF;border:1px solid #E5E4E0;border-radius:100px;padding:10px 18px;font-size:15px;font-weight:600">Coaches &amp; trainers</span>
+<span style="background:#FFFFFF;border:1px solid #E5E4E0;border-radius:100px;padding:10px 18px;font-size:15px;font-weight:600">Consultants</span>
+<span style="background:#FFFFFF;border:1px solid #E5E4E0;border-radius:100px;padding:10px 18px;font-size:15px;font-weight:600">E-commerce brands</span>
+<span style="background:#FFFFFF;border:1px solid #E5E4E0;border-radius:100px;padding:10px 18px;font-size:15px;font-weight:600">Real estate developers</span>
 </div>
 <div style="background:#FEF6E8;border:1px solid #F5DCAA;border-radius:12px;padding:22px 24px;max-width:640px">
-<h4 style="margin:0 0 8px;font-size:15px;color:#8A4F0B">Not for everyone</h4>
-<div style="font-size:14px;color:#4A4A48;display:flex;flex-direction:column;gap:6px">
+<h4 style="margin:0 0 8px;font-size:16px;color:#8A4F0B">Not for everyone</h4>
+<div style="font-size:15px;color:#4A4A48;display:flex;flex-direction:column;gap:6px">
 <div>Wix, Squarespace or custom-coded sites. WordPress only.</div>
 <div>Businesses not running paid ads. The ROI won't make sense.</div>
 <div>Sites already scoring 85+ on PageSpeed.</div>
@@ -217,24 +220,24 @@ Payments secured by Razorpay · UPI, Cards &amp; Netbanking
 </div>
 </section>
 
-<div style="max-width:1120px;margin:0 auto;padding:0 24px 56px;box-sizing:border-box"><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:14px;padding:20px 24px"><div style="font-size:17px;font-weight:700;letter-spacing:-0.01em;flex:1 1 300px">Running ads to a WordPress site? This call is for you.</div><a class="cta" data-cta="after_who_for" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:15px;font-weight:700;padding:14px 24px;border-radius:10px;min-height:48px;box-sizing:border-box;display:inline-flex;align-items:center">Book Audit Call — ₹199 →</a></div></div>
+<div style="max-width:1120px;margin:0 auto;padding:0 24px 56px;box-sizing:border-box"><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:#FFFFFF;border:1px solid #E5E4E0;border-radius:14px;padding:20px 24px"><div style="font-size:18px;font-weight:700;letter-spacing:-0.01em;flex:1 1 300px">Running ads to a WordPress site? This call is for you.</div><a class="cta" data-cta="after_who_for" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:16px;font-weight:700;padding:14px 24px;border-radius:10px;min-height:48px;box-sizing:border-box;display:inline-flex;align-items:center">Book Audit Call — ₹199 →</a></div></div>
 
 <!-- FINAL CTA -->
 <section style="max-width:1120px;margin:0 auto;padding:0 24px 72px;box-sizing:border-box">
 <div style="background:#111110;color:#FFFFFF;border-radius:20px;padding:64px 32px;text-align:center">
-<h2 style="margin:0 0 14px;font-size:clamp(28px,4vw,44px);font-weight:900;letter-spacing:-0.03em;line-height:1.1">If your site is leaking revenue,<br>we'll find where.</h2>
-<p style="margin:0 auto 28px;max-width:520px;font-size:17px;color:#D9D8D3;line-height:1.65">A 30-minute call. No pitch. No retainer pressure. Your score, what's broken, and how we fix it.</p>
+<h2 style="margin:0 0 14px;font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-0.025em;line-height:1.15">If your site is leaking revenue,<br>we'll find where.</h2>
+<p style="margin:0 auto 28px;max-width:520px;font-size:18px;color:#D9D8D3;line-height:1.65">A 30-minute call. No pitch. No retainer pressure. Your score, what's broken, and how we fix it.</p>
 <a class="cta" data-cta="final" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#FFFFFF;color:#111110;font-size:16px;font-weight:800;padding:16px 32px;border-radius:10px;min-height:52px;box-sizing:border-box;display:inline-flex;align-items:center">Book Your Audit Call — ₹199 →</a>
-<div style="margin-top:16px;font-size:13px;color:#D9D8D3">₹199 adjusted toward the ₹4,999 fix &nbsp;·&nbsp; Only 10 spots this month</div>
+<div style="margin-top:16px;font-size:14px;color:#D9D8D3">₹199 adjusted toward the ₹4,999 fix &nbsp;·&nbsp; Only 10 spots this month</div>
 </div>
 </section>
 
-<div style="text-align:center;padding:0 24px 40px;font-size:13px;color:#4A4A48">© 2026 AdComp. All rights reserved.</div>
+<div style="text-align:center;padding:0 24px 40px;font-size:14px;color:#4A4A48">© 2026 AdComp. All rights reserved.</div>
 
 <!-- STICKY BOTTOM CTA (always visible while scrolling) -->
 <div style="position:sticky;bottom:0;background:#FFFFFF;border-top:1px solid #E5E4E0;padding:12px 24px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
-<span style="font-size:14px;font-weight:600">₹199 audit · adjusted toward the fix</span>
-<a class="cta" data-cta="sticky" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:15px;font-weight:700;padding:12px 24px;border-radius:10px;min-height:48px;box-sizing:border-box;display:inline-flex;align-items:center">Book Audit Call — ₹199 →</a>
+<span class="bk-stk-txt" style="font-size:15px;font-weight:600">₹199 audit · adjusted toward the fix</span>
+<a class="cta" data-cta="sticky" href="https://rzp.io/rzp/webaudit" onclick="return awOpenAuditForm(event)" style="background:#111110;color:#FFFFFF;font-size:16px;font-weight:700;padding:12px 24px;border-radius:10px;min-height:48px;box-sizing:border-box;display:inline-flex;align-items:center">Book Audit Call — ₹199 →</a>
 </div>
 
 </div>
