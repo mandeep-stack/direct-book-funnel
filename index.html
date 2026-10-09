@@ -319,7 +319,8 @@ Payments secured by Razorpay · UPI, Cards &amp; Netbanking
     if(typeof gtag !== 'undefined') gtag('event', eventName, params);
 
     var payload = {
-      event_name: eventName,
+      // Server name must match the GTM Meta tag's event name exactly so Meta dedupes browser + server.
+      event_name: ({ book_audit_call: 'Book Audit Call — ₹199 →' })[eventName] || eventName,
       event_id: eventId,
       event_source_url: window.location.href,
       fbp: awGetCookie('_fbp'),
